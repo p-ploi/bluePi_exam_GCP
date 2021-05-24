@@ -6,7 +6,7 @@ To migrate data from PostgreSQL to BigQuery by using Airflow.
 - PostgreSQL
 
 ### Architecture
-[![](overall_architech)](https://github.com/p-ploi/bluePi_exam_GCP/blob/f4dd0bf5d55cc6ba0b46527d0d00351aaaf7df39/img/1overall_architech.png)
+![alt text](https://github.com/p-ploi/bluePi_exam_GCP/blob/f4dd0bf5d55cc6ba0b46527d0d00351aaaf7df39/img/1overall_architech.png)
 *The Architecture for this project*
 
 Let start to ELT process.
@@ -14,13 +14,13 @@ We will extract data from PostgreSQL to csv files and upload to *Staging Zone* (
 Then, load data into *Raw Zone* (BQ).
 Finally, we will transform data from *Raw Zone* (BQ) to *Persist Zone* (BQ).
 
-[![](user_permission)](https://github.com/p-ploi/bluePi_exam_GCP/blob/f4dd0bf5d55cc6ba0b46527d0d00351aaaf7df39/img/3user_permission.png)
+![alt text](https://github.com/p-ploi/bluePi_exam_GCP/blob/f4dd0bf5d55cc6ba0b46527d0d00351aaaf7df39/img/3user_permission.png)
 
 And user will use Analysis query in only at *Persist Zone*.
 
 ### Orchestration
 An Airflow instance is deployed on a Google Cloud Composer to orchestrate the execution of our pipeline.
-[![](overall_flow)](https://github.com/p-ploi/bluePi_exam_GCP/blob/f4dd0bf5d55cc6ba0b46527d0d00351aaaf7df39/img/2overall_flow.png)
+![alt text](https://github.com/p-ploi/bluePi_exam_GCP/blob/f4dd0bf5d55cc6ba0b46527d0d00351aaaf7df39/img/2overall_flow.png)
 
 
 #### Pipeline
@@ -43,4 +43,3 @@ But you can combine them in 1 pipeline by using 2 sub-pipelines.
 The house keeping process is day-to-day cleanup and waste disposal
 removal of unused files.
 You can set data retention policy And also to comply with PDPA.
-
