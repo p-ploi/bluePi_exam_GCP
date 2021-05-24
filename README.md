@@ -43,3 +43,4 @@ But you can combine them in 1 pipeline by using 2 sub-pipelines.
 The house keeping process is day-to-day cleanup and waste disposal
 removal of unused files.
 You can set data retention policy And also to comply with PDPA.
+
