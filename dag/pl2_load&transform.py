@@ -1,5 +1,5 @@
 from airflow import DAG
-# from airflow.contrib.operators.bigquery_operator import BigQueryOperator
+from airflow.contrib.operators.bigquery_operator import BigQueryOperator
 from airflow.operators.dummy_operator import DummyOperator
 from datetime import datetime, timedelta
 from airflow.contrib.operators.gcs_to_bq import GoogleCloudStorageToBigQueryOperator
@@ -18,16 +18,16 @@ DWH_DATASET = 'USER_PERSIST_DB'
 default_args = {
     'owner': 'Sasiprapa N.',
     'depends_on_past': False,
-    'start_date':datetime(2020, 4, 20),
+    'start_date': datetime(2021, 5, 24, 7, 10, 00),
     # 'email_on_failure': False,
     # 'email_on_retry': False,
     # 'retries': 5,
     # 'retry_delay': timedelta(minutes=5),
 }
 
-dag = DAG('pl_datalake_to_bq1',
-          start_date=datetime.now(),
-          schedule_interval='@once',
+dag = DAG('pl2_load_transform',
+          start_date=datetime(2021, 5, 24, 7, 10, 00),
+          schedule_interval='10 * * * *',
         #   concurrency=5,
         #   max_active_runs=1,
           default_args=default_args)

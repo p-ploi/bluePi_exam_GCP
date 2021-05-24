@@ -5,5 +5,6 @@ SELECT
 , id
 , first_name
 , last_name
+, current_timestamp()                             as dl_load_dt
 FROM
   `{{ params.PROJECT_ID }}.{{ params.STAGING_DATASET }}.user_users`
